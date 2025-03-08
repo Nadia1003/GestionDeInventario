@@ -1,16 +1,4 @@
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\GestionDeInventario.exe.config
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\GestionDeInventario.exe
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\GestionDeInventario.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\BE.dll
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\BLL.dll
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\SERVICIOS.dll
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\BE.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\BLL.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\SERVICIOS.pdb
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.AssemblyReference.cache
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.Properties.Resources.resources
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.GenerateResource.cache
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.Up2Date
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.exe
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.pdb
