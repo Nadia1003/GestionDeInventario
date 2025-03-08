@@ -1,0 +1,6 @@
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\BE\bin\Debug\BE.dll
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\BE\bin\Debug\BE.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\BE\obj\Debug\BE.dll
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\BE\obj\Debug\BE.pdb
