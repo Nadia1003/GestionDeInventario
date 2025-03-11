@@ -10,21 +10,34 @@ namespace DAL
 {
     public class Conexion
     {
-        SqlConnection con;
+        public SqlConnection cadena;
 
-        public void Conectar()
+        public Conexion()
         {
-            using (con = new SqlConnection("Data Source=DESKTOP-DQVMASA\\MSSQLSERVER01;Initial Catalog=GestionInventario;Integrated Security=True;Trust Server Certificate=True"))
-            {
-                try
-                {
-                    con.Open();
-                }
-                catch (Exception ex)
-                {
+            cadena = new SqlConnection("Data Source=DESKTOP-DQVMASA\\MSSQLSERVER01;Initial Catalog=GestionInventario;Integrated Security=True;");
+        }
 
-                    throw ex;
-                }
+        public void AbrirConexion()
+        {
+            try
+            {
+                cadena.Open();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void CerrarConexion()
+        {
+            try
+            {
+                cadena.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }
