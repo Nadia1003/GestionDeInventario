@@ -55,19 +55,17 @@ namespace DAL
             }
         }
 
-        public void Modificar(string nombre, string apellido, string mail, string contraseña, string encriptado, int id)
+        public void Modificar(string nombre, string apellido, string mail,  int id)
         {
             try
             {
-                string query = "UPDATE Usuario SET Nombre=@nombre, Apellido=@apellido, Mail=@mail, Contraseña=@contraseña, Encriptado=@encriptado WHERE IdUsuario=@IdUsuario";
+                string query = "UPDATE Usuario SET Nombre=@nombre, Apellido=@apellido, Mail=@mail WHERE IdUsuario=@idUsuario";
                 SqlParameter[] parametro =
                 {
                     new SqlParameter("@nombre", nombre),
                     new SqlParameter("@apellido", apellido),
                     new SqlParameter("@mail", mail),
-                    new SqlParameter("@contraseña", contraseña),
-                    new SqlParameter("@encriptado", encriptado),
-                    new SqlParameter("@IdUsuario", id)
+                    new SqlParameter("@idUsuario", id)
                 };
                 helper.EjecutarComando(query, parametro);
             }
@@ -77,6 +75,7 @@ namespace DAL
             }
         }
 
+        //NO SE USA TODAV
         public DataTable Seleccionar(int id)
         {
             try
@@ -85,6 +84,19 @@ namespace DAL
                 SqlParameter parametro = new SqlParameter("@Id", id);
 
                 return helper.EjecutarConsulta(query, parametro);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable SeleccionarTabla()
+        {
+            try
+            {
+                string query = "SELECT IdUsuario as Id, Nombre, Apellido, Mail FROM Usuario";
+                return helper.EjecutarConsulta(query, null);
             }
             catch
             {

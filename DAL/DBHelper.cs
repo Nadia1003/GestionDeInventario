@@ -22,6 +22,10 @@ namespace DAL
         {
             try
             {
+                if (con.cadena.State == ConnectionState.Closed)             //???//
+                {
+                    con = new Conexion();
+                } 
                 using (con.cadena)
                 {
                     con.AbrirConexion();
@@ -50,6 +54,10 @@ namespace DAL
         {
             try
             {
+                if (con.cadena.State == ConnectionState.Closed)      //???//
+                {
+                    con = new Conexion();
+                }
                 using (con.cadena)
                 {
                     con.AbrirConexion();
@@ -59,7 +67,12 @@ namespace DAL
                     cmd.Connection = con.cadena;
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.Add(parametro);
+
+                    if (parametro != null)
+                    {
+                        cmd.Parameters.Add(parametro);
+                    }
+
                     da.SelectCommand = cmd;
                     da.Fill(dt);
                     con.CerrarConexion();
