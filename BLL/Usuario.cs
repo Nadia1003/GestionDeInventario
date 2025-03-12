@@ -29,7 +29,6 @@ namespace BLL
             }
         }
 
-
         public void Eliminar(int id)
         {
             try
@@ -43,12 +42,11 @@ namespace BLL
             }
         }
 
-
-        public void Modificar(string nombre, string apellido, string mail, string contraseña, string encriptado, int id)
+        public void Modificar(string nombre, string apellido, string mail,  int id)
         {
             try
             {
-                usuario.Modificar(nombre, apellido, mail, contraseña, encriptado, id);
+                usuario.Modificar(nombre, apellido, mail,  id);
             }
             catch (Exception ex)
             {
@@ -56,7 +54,7 @@ namespace BLL
             }
         }
 
-
+        //NO SE USA TODAV
         public DataTable Seleccionar(int id)
         {
             try
@@ -66,6 +64,19 @@ namespace BLL
             catch (Exception ex)
             {
                 throw new Exception("Se generó un error: " + ex.Message);
+            }
+        }
+
+        public DataTable SeleccionarTabla()
+        {
+            try
+            {
+                return usuario.SeleccionarTabla();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Se generó un error: "+ ex.Message);
             }
         }
     }
