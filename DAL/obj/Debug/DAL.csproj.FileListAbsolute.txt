@@ -1,3 +1,5 @@
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\bin\Debug\DAL.dll.config
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\bin\Debug\DAL.dll
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\bin\Debug\DAL.pdb
@@ -75,8 +77,6 @@ C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\G
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\bin\Debug\System.Text.Json.xml
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\bin\Debug\System.ValueTuple.xml
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.dll
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\DAL\obj\Debug\DAL.pdb

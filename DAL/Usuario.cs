@@ -17,17 +17,18 @@ namespace DAL
             helper = new DBHelper();
         }
 
-        public void Crear(string nombre, string apellido, string mail, string contraseña, string encriptado)
+        public void Crear(string nombreUsuario,string nombre, string apellido, string mail, string contraseña)
         {
             try
             {
-                string query = "INSERT INTO Usuario VALUES(@nombre,@apellido, @mail ,@contraseña, @encriptado)";
+                string query = "INSERT INTO Usuario VALUES(@nombreUsuario,@nombre,@apellido, @mail ,@contraseña)";
                 SqlParameter[] parametros = {
+                    new SqlParameter("@nombreUsuario", nombreUsuario),
                     new SqlParameter("@nombre", nombre),
                     new SqlParameter("@apellido", apellido),
                     new SqlParameter("@mail", mail),
                     new SqlParameter("@contraseña", contraseña),
-                    new SqlParameter("@encriptado", encriptado)
+                    //new SqlParameter("@encriptado", encriptado)
                 };
 
                 helper.EjecutarComando(query, parametros);
@@ -75,13 +76,12 @@ namespace DAL
             }
         }
 
-        //NO SE USA TODAV
-        public DataTable Seleccionar(int id)
+        public DataTable SeleccionarUsuario(string usuario)
         {
             try
             {
-                string query = "SELECT * FROM Usuario WHERE IdUsuario=@Id";
-                SqlParameter parametro = new SqlParameter("@Id", id);
+                string query = "SELECT Usuario, Contraseña FROM Usuario WHERE Usuario=@Usuario";
+                SqlParameter parametro = new SqlParameter("@Usuario", usuario);
 
                 return helper.EjecutarConsulta(query, parametro);
             }
@@ -95,7 +95,7 @@ namespace DAL
         {
             try
             {
-                string query = "SELECT IdUsuario as Id, Nombre, Apellido, Mail FROM Usuario";
+                string query = "SELECT IdUsuario as Id, Usuario, Nombre, Apellido, Mail FROM Usuario";
                 return helper.EjecutarConsulta(query, null);
             }
             catch
