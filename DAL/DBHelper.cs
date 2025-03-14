@@ -54,7 +54,7 @@ namespace DAL
         {
             try
             {
-                if (con.cadena.State == ConnectionState.Closed)      //???//
+                if (con.cadena.State == ConnectionState.Closed)
                 {
                     con = new Conexion();
                 }

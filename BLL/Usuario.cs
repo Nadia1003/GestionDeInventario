@@ -10,18 +10,18 @@ namespace BLL
 {
     public class Usuario
     {
-        DAL.Usuario usuario;
+        DAL.Usuario dal_usuario;
 
         public Usuario()
         {
-            usuario = new DAL.Usuario();
+            dal_usuario = new DAL.Usuario();
         }
 
-        public void Crear(string nombre, string apellido, string mail, string contraseña, string encriptado)
+        public void Crear(string nombreUsuario, string nombre, string apellido, string mail, string contraseña)
         {
             try
             {
-                usuario.Crear(nombre, apellido, mail, contraseña, encriptado);
+                dal_usuario.Crear(nombreUsuario, nombre, apellido, mail, contraseña);
             }
             catch (Exception ex)
             {
@@ -33,7 +33,7 @@ namespace BLL
         {
             try
             {
-                usuario.Eliminar(id);
+                dal_usuario.Eliminar(id);
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace BLL
         {
             try
             {
-                usuario.Modificar(nombre, apellido, mail,  id);
+                dal_usuario.Modificar(nombre, apellido, mail,  id);
             }
             catch (Exception ex)
             {
@@ -54,12 +54,11 @@ namespace BLL
             }
         }
 
-        //NO SE USA TODAV
-        public DataTable Seleccionar(int id)
+        public DataTable SeleccionarUsuario(string usuario)
         {
             try
             {
-                return usuario.Seleccionar(id);
+                return dal_usuario.SeleccionarUsuario(usuario);
             }
             catch (Exception ex)
             {
@@ -71,13 +70,21 @@ namespace BLL
         {
             try
             {
-                return usuario.SeleccionarTabla();
+                return dal_usuario.SeleccionarTabla();
             }
             catch (Exception ex)
             {
 
                 throw new Exception("Se generó un error: "+ ex.Message);
             }
+        }
+
+        public bool VerificarAccesoUsuario(string usuario, string contraseña)
+        {
+            DataTable dt = SeleccionarUsuario(usuario); //selecciono usuario y contraseña bd
+
+            //comparo contraseña ingresada con almacenada
+            return SERVICIOS.Encriptar.EncriptarCadena(contraseña) == dt.Rows[0][1].ToString();
         }
     }
 }

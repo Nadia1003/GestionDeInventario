@@ -42,13 +42,13 @@ namespace GestionDeInventario
             {
                 BE.Usuario be_usuario = new BE.Usuario
                 {
+                    NombreUsuario = txtUsuario.Text,
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     Mail = txtMail.Text,
-                    Contraseña = "",
-                    Encritado = "Encriptado"
+                    Contraseña = SERVICIOS.Encriptar.EncriptarCadena("Contraseña") //"Contraseña"
                 };
-                bll_usuario.Crear(be_usuario.Nombre, be_usuario.Apellido, be_usuario.Mail, be_usuario.Contraseña, be_usuario.Encritado);
+                bll_usuario.Crear(be_usuario.NombreUsuario, be_usuario.Nombre, be_usuario.Apellido, be_usuario.Mail, be_usuario.Contraseña);
                 MessageBox.Show("Se guardó correctamente", "Crear usuario", MessageBoxButtons.OK, MessageBoxIcon.None);
                 LimpiarCasillas();
                 dgv.DataSource = bll_usuario.SeleccionarTabla();
@@ -61,6 +61,7 @@ namespace GestionDeInventario
 
         public void LimpiarCasillas()
         {
+            txtUsuario.Clear();
             txtNombre.Clear();
             txtApellido.Clear();
             txtMail.Clear();
@@ -68,6 +69,7 @@ namespace GestionDeInventario
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtUsuario.Text= dgv.Rows[e.RowIndex].Cells["Usuario"].Value.ToString();
             txtNombre.Text = dgv.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
             txtApellido.Text = dgv.Rows[e.RowIndex].Cells["Apellido"].Value.ToString();
             txtMail.Text = dgv.Rows[e.RowIndex].Cells["Mail"].Value.ToString();
