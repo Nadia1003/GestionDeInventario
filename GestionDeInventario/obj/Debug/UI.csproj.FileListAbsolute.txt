@@ -20,3 +20,4 @@ C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\G
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.Up2Date
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.exe
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmOlvidoContraseña.resources

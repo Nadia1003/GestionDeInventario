@@ -18,70 +18,56 @@ namespace DAL
         }
 
         //CONSULTA GENERICA PARA INSERT, DELETE, UPDATE
-        public void EjecutarComando(string query, SqlParameter[] parametros)
+        public void EjecutarComando(string query, SqlParameter[] parametros = null)
         {
-            try
+            if (con.cadena.State == ConnectionState.Closed)             //???//
             {
-                if (con.cadena.State == ConnectionState.Closed)             //???//
-                {
-                    con = new Conexion();
-                } 
-                using (con.cadena)
-                {
-                    con.AbrirConexion();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con.cadena;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = query;
-
-                    if (parametros != null)
-                    {
-                        cmd.Parameters.AddRange(parametros);
-                    }
-
-                    cmd.ExecuteNonQuery();
-                    con.CerrarConexion();
-                }
+                con = new Conexion();
             }
-            catch
+            using (con.cadena)
             {
-                throw;
+                con.AbrirConexion();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con.cadena;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+
+                if (parametros != null)
+                {
+                    cmd.Parameters.AddRange(parametros);
+                }
+
+                cmd.ExecuteNonQuery();
+                con.CerrarConexion();
             }
         }
 
         //CONSULTA GENERICA PARA SELECT
         public DataTable EjecutarConsulta(string query, SqlParameter parametro)
         {
-            try
+            if (con.cadena.State == ConnectionState.Closed)
             {
-                if (con.cadena.State == ConnectionState.Closed)
-                {
-                    con = new Conexion();
-                }
-                using (con.cadena)
-                {
-                    con.AbrirConexion();
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter da = new SqlDataAdapter(query, con.cadena);
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con.cadena;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = query;
-
-                    if (parametro != null)
-                    {
-                        cmd.Parameters.Add(parametro);
-                    }
-
-                    da.SelectCommand = cmd;
-                    da.Fill(dt);
-                    con.CerrarConexion();
-                    return dt;
-                }
+                con = new Conexion();
             }
-            catch
+            using (con.cadena)
             {
-                throw;
+                con.AbrirConexion();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(query, con.cadena);
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con.cadena;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+
+                if (parametro != null)
+                {
+                    cmd.Parameters.Add(parametro);
+                }
+
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                con.CerrarConexion();
+                return dt;
             }
         }
     }

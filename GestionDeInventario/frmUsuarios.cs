@@ -91,7 +91,7 @@ namespace GestionDeInventario
                     Apellido = txtApellido.Text,
                     Mail = txtMail.Text
                 };
-                bll_usuario.Modificar(be_usuario.Nombre, be_usuario.Apellido, be_usuario.Mail,  be_usuario.Id);
+//                bll_usuario.Modificar(be_usuario.Nombre, be_usuario.Apellido, be_usuario.Mail,  be_usuario.Id);
                 dgv.DataSource = bll_usuario.SeleccionarTabla();
                 LimpiarCasillas();
             }
