@@ -19,26 +19,12 @@ namespace DAL
 
         public void AbrirConexion()
         {
-            try
-            {
-                cadena.Open();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            cadena.Open();
         }
 
         public void CerrarConexion()
         {
-            try
-            {
-                cadena.Close();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            cadena.Close();
         }
     }
 }

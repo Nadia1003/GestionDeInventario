@@ -15,12 +15,11 @@ namespace GestionDeInventario
 {
     public partial class frmLogin : Form
     {
-        BE.Usuario be_usuario;
         BLL.Usuario bll_usuario;
+
         public frmLogin()
         {
             InitializeComponent();
-            be_usuario = new BE.Usuario();
             bll_usuario = new BLL.Usuario();
         }
 
@@ -28,14 +27,42 @@ namespace GestionDeInventario
         {
             try
             {
-                be_usuario.NombreUsuario = txtUsuario.Text;
-                if (bll_usuario.VerificarAccesoUsuario(be_usuario.NombreUsuario, txtContraseña.Text))
+                if (bll_usuario.VerificarAccesoUsuario(txtUsuario.Text, txtContraseña.Text))
+                {
+                    DataTable dt = new DataTable();
+                    dt = bll_usuario.SeleccionarUsuario(txtUsuario.Text);
+
+                    BE.Usuario usuario = new BE.Usuario()
+                    {
+                        NombreUsuario = dt.Rows[0]["Usuario"].ToString(),
+                        Nombre = dt.Rows[0]["Nombre"].ToString(),
+                        Apellido = dt.Rows[0]["Apellido"].ToString(),
+                        Mail = dt.Rows[0]["Mail"].ToString(),
+                        Contraseña = dt.Rows[0]["Contraseña"].ToString()
+                    };
+
+                    BLL.Singleton singleton = BLL.Singleton.GetInstance();
+                    singleton.IniciarSesion(usuario);
+
+
                     MessageBox.Show("OK");
+                }
+                else
+                {
+                    MessageBox.Show("Compruebe los datos e ingrese nuevamente.");
+                }
             }
             catch
             {
-                MessageBox.Show("Se generó un error, compuebe los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se generó un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void llblOlvideContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmOlvidoContraseña frm = new frmOlvidoContraseña();
+            frm.Show();
+            this.Hide();
         }
     }
 }

@@ -42,11 +42,11 @@ namespace BLL
             }
         }
 
-        public void Modificar(string nombre, string apellido, string mail,  int id)
+        public void Modificar(string usuario, string nombre = null, string apellido = null, string mail = null, string contraseña = null)
         {
             try
             {
-                dal_usuario.Modificar(nombre, apellido, mail,  id);
+                dal_usuario.Modificar(usuario, nombre, apellido, mail, contraseña);
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace BLL
             catch (Exception ex)
             {
 
-                throw new Exception("Se generó un error: "+ ex.Message);
+                throw new Exception("Se generó un error: " + ex.Message);
             }
         }
 
@@ -84,7 +84,19 @@ namespace BLL
             DataTable dt = SeleccionarUsuario(usuario); //selecciono usuario y contraseña bd
 
             //comparo contraseña ingresada con almacenada
-            return SERVICIOS.Encriptar.EncriptarCadena(contraseña) == dt.Rows[0][1].ToString();
+            return SERVICIOS.Encriptar.EncriptarCadena(contraseña) == dt.Rows[0][4].ToString();
+        }
+
+        public string EncriptarCadena(string cadena)
+        {
+            try
+            {
+                return SERVICIOS.Encriptar.EncriptarCadena(cadena);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Se generó un error: "+ ex.Message);
+            }
         }
     }
 }

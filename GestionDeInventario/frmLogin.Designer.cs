@@ -34,7 +34,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
-            this.llblCrearCuenta = new System.Windows.Forms.LinkLabel();
+            this.llblOlvideContraseña = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -56,7 +56,7 @@
             this.btnIngresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(32, 180);
+            this.btnIngresar.Location = new System.Drawing.Point(32, 194);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(137, 27);
             this.btnIngresar.TabIndex = 2;
@@ -94,22 +94,23 @@
             this.lblIniciarSesion.TabIndex = 5;
             this.lblIniciarSesion.Text = "Iniciar sesión";
             // 
-            // llblCrearCuenta
+            // llblOlvideContraseña
             // 
-            this.llblCrearCuenta.AutoSize = true;
-            this.llblCrearCuenta.Location = new System.Drawing.Point(65, 210);
-            this.llblCrearCuenta.Name = "llblCrearCuenta";
-            this.llblCrearCuenta.Size = new System.Drawing.Size(68, 13);
-            this.llblCrearCuenta.TabIndex = 6;
-            this.llblCrearCuenta.TabStop = true;
-            this.llblCrearCuenta.Text = "Crear cuenta";
+            this.llblOlvideContraseña.AutoSize = true;
+            this.llblOlvideContraseña.Location = new System.Drawing.Point(49, 164);
+            this.llblOlvideContraseña.Name = "llblOlvideContraseña";
+            this.llblOlvideContraseña.Size = new System.Drawing.Size(104, 13);
+            this.llblOlvideContraseña.TabIndex = 7;
+            this.llblOlvideContraseña.TabStop = true;
+            this.llblOlvideContraseña.Text = "Olvidé la contraseña";
+            this.llblOlvideContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblOlvideContraseña_LinkClicked);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(212, 253);
-            this.Controls.Add(this.llblCrearCuenta);
+            this.Controls.Add(this.llblOlvideContraseña);
             this.Controls.Add(this.lblIniciarSesion);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
@@ -131,6 +132,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label lblIniciarSesion;
-        private System.Windows.Forms.LinkLabel llblCrearCuenta;
+        private System.Windows.Forms.LinkLabel llblOlvideContraseña;
     }
 }
