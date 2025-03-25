@@ -53,7 +53,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(23, 254);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(111, 25);
-            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -130,7 +130,7 @@
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.Size = new System.Drawing.Size(443, 305);
-            this.dgv.TabIndex = 6;
+            this.dgv.TabIndex = 8;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // btnModificar
@@ -141,7 +141,7 @@
             this.btnModificar.Location = new System.Drawing.Point(152, 254);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(111, 25);
-            this.btnModificar.TabIndex = 12;
+            this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -154,7 +154,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(23, 295);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(111, 25);
-            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -167,7 +167,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(152, 295);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(111, 25);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -178,7 +178,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(111, 59);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(152, 21);
-            this.txtUsuario.TabIndex = 15;
+            this.txtUsuario.TabIndex = 0;
             // 
             // lblUsuario
             // 

@@ -14,5 +14,6 @@ namespace BE
         public string Apellido { get; set; }
         public string Mail { get; set; }
         public string Contraseña { get; set; }
+        public bool ContraseñaModificada { get; set; }
     }
 }

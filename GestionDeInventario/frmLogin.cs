@@ -13,7 +13,7 @@ using SERVICIOS;
 
 namespace GestionDeInventario
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : FormHelper
     {
         BLL.Usuario bll_usuario;
 
@@ -27,10 +27,10 @@ namespace GestionDeInventario
         {
             try
             {
-                if (bll_usuario.VerificarAccesoUsuario(txtUsuario.Text, txtContraseña.Text))
+                if (bll_usuario.VerificarAccesoUsuario(txtUsuario.Text, txtContraseña.Text).Ok)
                 {
                     DataTable dt = new DataTable();
-                    dt = bll_usuario.SeleccionarUsuario(txtUsuario.Text);
+                    dt = bll_usuario.SeleccionarUsuario(txtUsuario.Text).Data;
 
                     BE.Usuario usuario = new BE.Usuario()
                     {
