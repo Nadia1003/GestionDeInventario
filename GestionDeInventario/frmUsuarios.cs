@@ -12,7 +12,7 @@ using BE;
 
 namespace GestionDeInventario
 {
-    public partial class frmUsuarios : Form
+    public partial class frmUsuarios : FormHelper
     {
         BLL.Usuario bll_usuario;
         BE.Usuario be_usuario;
@@ -23,12 +23,11 @@ namespace GestionDeInventario
             be_usuario = new BE.Usuario();
         }
 
-
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             try
             {
-                dgv.DataSource = bll_usuario.SeleccionarTabla();
+                dgv.DataSource = bll_usuario.SeleccionarTabla().Data;
             }
             catch (Exception ex)
             {
@@ -46,12 +45,13 @@ namespace GestionDeInventario
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     Mail = txtMail.Text,
-                    Contraseña = SERVICIOS.Encriptar.EncriptarCadena("Contraseña") //"Contraseña"
+                    Contraseña = SERVICIOS.Encriptar.EncriptarCadena("Contraseña"),
+                    ContraseñaModificada = false
                 };
-                bll_usuario.Crear(be_usuario.NombreUsuario, be_usuario.Nombre, be_usuario.Apellido, be_usuario.Mail, be_usuario.Contraseña);
-                MessageBox.Show("Se guardó correctamente", "Crear usuario", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                ValidarResultado(bll_usuario.Crear(be_usuario));                
                 LimpiarCasillas();
-                dgv.DataSource = bll_usuario.SeleccionarTabla();
+                dgv.DataSource = bll_usuario.SeleccionarTabla().Data;
             }
             catch
             {
@@ -86,13 +86,14 @@ namespace GestionDeInventario
             {
                 BE.Usuario be_usuario = new BE.Usuario
                 {
-                    Id = int.Parse(dgv.CurrentRow.Cells["Id"].Value.ToString()),
+                    NombreUsuario = txtUsuario.Text,
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     Mail = txtMail.Text
                 };
-//                bll_usuario.Modificar(be_usuario.Nombre, be_usuario.Apellido, be_usuario.Mail,  be_usuario.Id);
-                dgv.DataSource = bll_usuario.SeleccionarTabla();
+
+                ValidarResultado(bll_usuario.Modificar(be_usuario));
+                dgv.DataSource = bll_usuario.SeleccionarTabla().Data;
                 LimpiarCasillas();
             }
             catch (Exception ex)
@@ -106,8 +107,8 @@ namespace GestionDeInventario
             try
             {
                 be_usuario.Id = int.Parse(dgv.CurrentRow.Cells["Id"].Value.ToString());
-                bll_usuario.Eliminar(be_usuario.Id);
-                dgv.DataSource = bll_usuario.SeleccionarTabla();
+                ValidarResultado(bll_usuario.Eliminar(be_usuario.Id));
+                dgv.DataSource = bll_usuario.SeleccionarTabla().Data;
             }
             catch (Exception ex)
             {

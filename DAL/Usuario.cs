@@ -17,17 +17,17 @@ namespace DAL
             helper = new DBHelper();
         }
 
-        public void Crear(string nombreUsuario, string nombre, string apellido, string mail, string contraseña)
+        public void Crear(BE.Usuario usuario)
         {
-            string query = "INSERT INTO Usuario VALUES(@nombreUsuario,@nombre,@apellido, @mail ,@contraseña)";
+            string query = "INSERT INTO Usuario VALUES(@nombreUsuario,@nombre,@apellido, @mail ,@contraseña, @contraseñaModificada)";
             SqlParameter[] parametros = {
-                    new SqlParameter("@nombreUsuario", nombreUsuario),
-                    new SqlParameter("@nombre", nombre),
-                    new SqlParameter("@apellido", apellido),
-                    new SqlParameter("@mail", mail),
-                    new SqlParameter("@contraseña", contraseña)
+                    new SqlParameter("@nombreUsuario", usuario.NombreUsuario),
+                    new SqlParameter("@nombre", usuario.Nombre),
+                    new SqlParameter("@apellido", usuario.Apellido),
+                    new SqlParameter("@mail", usuario.Mail),
+                    new SqlParameter("@contraseña", usuario.Contraseña),
+                    new SqlParameter("@contraseñaModificada", usuario.ContraseñaModificada)
             };
-
             helper.EjecutarComando(query, parametros);
         }
 
@@ -41,44 +41,46 @@ namespace DAL
             helper.EjecutarComando(query, parametro);
         }
 
-        public void Modificar(string usuario, string nombre = null, string apellido = null, string mail = null, string contraseña = null)
+        public void Modificar(BE.Usuario usuario)
         {
             string query = "UPDATE Usuario SET ";
-            string query_parametros = "";
-
+            List<string> query_parametros = new List<string>();
             List<SqlParameter> lista_parametros = new List<SqlParameter>();
-            SqlParameter[] vector_parametro;
 
-            lista_parametros.Add(new SqlParameter("@usuario", usuario));
-
-            if (!string.IsNullOrEmpty(nombre))
+            if (!string.IsNullOrEmpty(usuario.Nombre))
             {
-                lista_parametros.Add(new SqlParameter("@nombre", nombre));
-                query_parametros += "Nombre = @nombre";
+                lista_parametros.Add(new SqlParameter("@nombre", usuario.Nombre));
+                query_parametros.Add("Nombre = @nombre");
             }
 
-            if (!string.IsNullOrEmpty(apellido))
+            if (!string.IsNullOrEmpty(usuario.Apellido))
             {
-                lista_parametros.Add(new SqlParameter("@apellido", apellido));
-                query_parametros += "Apellido=@apellido";
+                lista_parametros.Add(new SqlParameter("@apellido", usuario.Apellido));
+                query_parametros.Add("Apellido=@apellido");
             }
 
-            if (!string.IsNullOrEmpty(mail))
+            if (!string.IsNullOrEmpty(usuario.Mail))
             {
-                lista_parametros.Add(new SqlParameter("@mail", mail));
-                query_parametros += "Mail=@mail";
+                lista_parametros.Add(new SqlParameter("@mail", usuario.Mail));
+                query_parametros.Add("Mail=@mail");
             }
 
-            if (!string.IsNullOrEmpty(contraseña))
+            if (!string.IsNullOrEmpty(usuario.Contraseña))
             {
-                lista_parametros.Add(new SqlParameter("@contraseña", contraseña));
-                query_parametros += "Contraseña=@contraseña";
+                lista_parametros.Add(new SqlParameter("@contraseña", usuario.Contraseña));
+                query_parametros.Add("Contraseña=@contraseña");
+            }
+
+            if (!string.IsNullOrEmpty(usuario.ContraseñaModificada.ToString()))
+            {
+                lista_parametros.Add(new SqlParameter("@contraseñaModificada", usuario.ContraseñaModificada));
+                query_parametros.Add("ContraseñaModificada=@contraseñaModificada");
             }
 
             query += string.Join(",", query_parametros);
+            lista_parametros.Add(new SqlParameter("@usuario", usuario.NombreUsuario));
             query += " WHERE Usuario=@usuario";
-            vector_parametro = lista_parametros.ToArray();
-            helper.EjecutarComando(query, vector_parametro);
+            helper.EjecutarComando(query, lista_parametros.ToArray());
         }
 
         public DataTable SeleccionarUsuario(string usuario)

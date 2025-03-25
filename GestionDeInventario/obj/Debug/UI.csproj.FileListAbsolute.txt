@@ -1,9 +1,3 @@
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.AssemblyReference.cache
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmLogin.resources
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmUsuarios.resources
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.Properties.Resources.resources
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.GenerateResource.cache
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\GestionDeInventario.exe.config
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\GestionDeInventario.exe
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\GestionDeInventario.pdb
@@ -17,7 +11,13 @@ C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\G
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\SERVICIOS.pdb
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\DAL.pdb
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\bin\Debug\DAL.dll.config
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmLogin.resources
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmOlvidoContraseña.resources
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmUsuarios.resources
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\UI.csproj.Up2Date
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.exe
 C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Sistema de inventario\Proyecto-Inventario\GestionDeInventario\GestionDeInventario\obj\Debug\GestionDeInventario.frmOlvidoContraseña.resources

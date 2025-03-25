@@ -12,7 +12,7 @@ using BE;
 
 namespace GestionDeInventario
 {
-    public partial class frmOlvidoContraseña : Form
+    public partial class frmOlvidoContraseña : FormHelper
     {
         BLL.Usuario bllusuario;
         BE.Usuario usuario;
@@ -34,20 +34,21 @@ namespace GestionDeInventario
         {
             string nueva_contraseña, confirmacion_contraseña;
 
-            if (bllusuario.SeleccionarUsuario(txtUsuario.Text).Rows.Count > 0)
+            if (bllusuario.SeleccionarUsuario(txtUsuario.Text).Data.Rows.Count > 0)
             {
                 usuario.NombreUsuario = txtUsuario.Text;
-                BLL.Singleton _singleton = BLL.Singleton.GetInstance();
-                _singleton.usuario = usuario;
+                //BLL.Singleton _singleton = BLL.Singleton.GetInstance();
+                //_singleton.usuario = usuario;
             }
 
-            nueva_contraseña = bllusuario.EncriptarCadena(txtContraseña.Text);
-            confirmacion_contraseña = bllusuario.EncriptarCadena(txtConfirmarContraseña.Text);
+            nueva_contraseña = bllusuario.EncriptarCadena(txtContraseña.Text).Data;
+            confirmacion_contraseña = bllusuario.EncriptarCadena(txtConfirmarContraseña.Text).Data;
 
             if (nueva_contraseña == confirmacion_contraseña)
             {
-                bllusuario.Modificar(BLL.Singleton.GetInstance().usuario.NombreUsuario, null, null, null, nueva_contraseña);
-                MessageBox.Show("Se guardó correctamente la nueva contraseña. Ingrese nuevamente.");
+                usuario.Contraseña = nueva_contraseña;
+                //BLL.Singleton.GetInstance().usuario;
+                ValidarResultado(bllusuario.Modificar(usuario));
                 frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Close();
